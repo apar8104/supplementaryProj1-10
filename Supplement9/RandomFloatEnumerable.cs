@@ -7,6 +7,11 @@ public class RandomFloatEnumerable : IEnumerable<float>
 {
     private readonly Random _random;
     private readonly Func<float> _generator;
+
+    /// <summary>
+    /// Initializes a new instance of the RandomFloatEnumerable class using
+    /// a random number generator. 
+    /// </summary>
     public RandomFloatEnumerable()
     {
         _random = new Random();
