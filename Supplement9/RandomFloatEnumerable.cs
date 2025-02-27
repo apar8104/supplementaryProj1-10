@@ -5,9 +5,12 @@ namespace Supplement9;
 
 public class RandomFloatEnumerable : IEnumerable<float>
 {
+    private readonly Random _random;
+    private readonly Func<float> _generator;
     public RandomFloatEnumerable()
     {
-        throw new NotImplementedException();
+        _random = new Random();
+        _generator = () => (float)_random.NextDouble();
     }
 
     public RandomFloatEnumerable(Func<float> generator)
