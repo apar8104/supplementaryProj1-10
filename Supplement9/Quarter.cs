@@ -19,8 +19,18 @@ public class Quarter
         _value = value;
     }
 
+    /// <summary>
+    /// determines the quarter which the value belongs. 
+    /// </summary>
+    /// <returns>The quarter index (0, 3). </returns>
     private int GetQuarter() => (int)(_value * 4);
 
+    /// <summary>
+    /// Determines if two Quarter instances belong to the same quarter.
+    /// </summary>
+    /// <param name="q1">The first quarter.</param>
+    /// <param name="q2">The second quarter.</param>
+    /// <returns>True if both instances belong to the same quarter; otherwise, false.</returns>
     public static bool operator ==(Quarter q1, Quarter q2)
     {
         if (ReferenceEquals(q1, q2)) return true;
