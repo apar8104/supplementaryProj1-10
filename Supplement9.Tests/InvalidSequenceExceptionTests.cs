@@ -6,6 +6,6 @@ public class InvalidSequenceExceptionTests
     public void ExceptionShouldHaveDefaultMessage()
     {
         var ex = new InvalidSequenceException();
-        Assert.Equal("An invalid sequence was generted.", ex.Message);
+        Assert.Equal("An invalid sequence was generated.",ex.Message);
     }
 }

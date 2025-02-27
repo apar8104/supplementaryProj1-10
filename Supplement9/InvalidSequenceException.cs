@@ -3,9 +3,9 @@
 public class InvalidSequenceException : Exception
 {
     public InvalidSequenceException()
-    {
-        throw new NotImplementedException();
-    }
+    
+        : base("An invalid sequence was generated.") {}
+    
     public InvalidSequenceException(string message)
     {
         throw new NotImplementedException();
