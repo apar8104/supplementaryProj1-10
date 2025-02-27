@@ -102,5 +102,9 @@ public class Quarter
         return false;
     }
 
+    /// <summary>
+    /// Gets the hash code for this instance.
+    /// </summary>
+    /// <returns>A hash code representing this instance.</returns>
     public override int GetHashCode() => GetQuarter().GetHashCode();
 }
