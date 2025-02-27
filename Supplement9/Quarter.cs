@@ -16,13 +16,12 @@ public class Quarter
 
     public static bool operator ==(Quarter q1, Quarter q2)
     {
-        throw new NotImplementedException();
+        if (ReferenceEquals(q1, q2)) return true;
+        if (q1 is null || q2 is null) return false;
+        return q1.GetQuarter() == q2.GetQuarter();
     }
 
-     public static bool operator !=(Quarter q1, Quarter q2)
-    {
-        throw new NotImplementedException();
-    }
+     public static bool operator !=(Quarter q1, Quarter q2) => !(q1 == q2);
 
      public static bool operator <(Quarter q1, Quarter q2)
     {
