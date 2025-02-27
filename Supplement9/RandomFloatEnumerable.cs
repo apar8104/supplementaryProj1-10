@@ -18,6 +18,12 @@ public class RandomFloatEnumerable : IEnumerable<float>
         _generator = () => (float)_random.NextDouble();
     }
 
+    /// <summary>
+    /// Initializes a new instance with a custom numbr generator. 
+    /// </summary>
+    /// <param name="generator">Generates a floating point number. </param>
+    /// <exception cref="ArgumentNullException">Thrown if generator is null. 
+    /// </exception>
     public RandomFloatEnumerable(Func<float> generator)
     {
         _generator = generator ?? throw new ArgumentNullException(nameof(generator));
