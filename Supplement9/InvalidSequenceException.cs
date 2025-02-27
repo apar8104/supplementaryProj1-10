@@ -10,9 +10,9 @@ public class InvalidSequenceException : Exception
         : base("An invalid sequence was generated.") {}
     
     /// <summary>
-    /// 
+    /// Gives a custom message when invalid sequence exception is thrown. 
     /// </summary>
-    /// <param name="message"></param>
+    /// <param name="message">The custom message to be given. </param>
     public InvalidSequenceException(string message)
         : base(message) {}
 }
