@@ -48,8 +48,5 @@ public class Quarter
         return false;
     }
 
-    public override int GetHashCode()
-    {
-        throw new NotImplementedException();
-    }
+    public override int GetHashCode() => GetQuarter().GetHashCode();
 }
