@@ -59,6 +59,12 @@ public class Quarter
         return q1._value < q2._value;
     }
 
+     /// <summary>
+    /// Determines if one Quarter instance is less than or equal to another.
+    /// </summary>
+    /// <param name="q1">The first quarter.</param>
+    /// <param name="q2">The second quarter.</param>
+    /// <returns>True if <paramref name="q1"/> is less than or equal to <paramref name="q2"/>; otherwise, false.</returns>
     public static bool operator <=(Quarter q1, Quarter q2) => q1 < q2 || q1 == q2;
 
      public static bool operator >(Quarter q1, Quarter q2)
