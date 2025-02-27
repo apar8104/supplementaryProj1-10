@@ -16,4 +16,18 @@ public class RandomFloatEnumerableTests
             Assert.InRange(value, 0.0f, 1.0f);
         }
     }
+
+    [Fact]
+    public void EnumeratorShouldThrowExceptionAfterThreeLowValues()
+    {
+        var generator = new RandomFloatEnumerable(() => 0.4f);
+
+        using var enumerator = generator.GetEnumerator();
+        Assert.Throws<InvalidSequenceException>(() =>
+        {
+            enumerator.MoveNext();
+            enumerator.MoveNext();
+            enumerator.MoveNext();
+        });
+    }
 }
