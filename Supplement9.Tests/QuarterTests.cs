@@ -26,4 +26,15 @@ public class QuarterTests
         var q2 = new Quarter(value2);
         Assert.Equal(expected, q1 < q2);
     }
+
+    [Theory]
+    [InlineData(0.2f, 0.2f, false)] 
+    [InlineData(0.1f, 0.4f, false)]
+    [InlineData(0.7f, 0.5f, true)]
+    public void QuarterGreaterThanOperatorWorksCorrectly(float value1, float value2, bool expected)
+    {
+        var q1 = new Quarter(value1);
+        var q2 = new Quarter(value2);
+        Assert.Equal(expected, q1 > q2);
+    }
 }
