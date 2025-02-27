@@ -38,6 +38,12 @@ public class Quarter
         return q1.GetQuarter() == q2.GetQuarter();
     }
 
+    /// <summary>
+    /// Determines if two Quarter instances belong to different quarters.
+    /// </summary>
+    /// <param name="q1">The first quarter.</param>
+    /// <param name="q2">The second quarter.</param>
+    /// <returns>True if the instances belong to different quarters; otherwise, false.</returns>
      public static bool operator !=(Quarter q1, Quarter q2) => !(q1 == q2);
 
      public static bool operator <(Quarter q1, Quarter q2)
