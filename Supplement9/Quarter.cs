@@ -3,6 +3,13 @@ public class Quarter
 {
     private readonly float _value;
 
+    /// <summary>
+    /// Initializes a new instance of quarter class. 
+    /// </summary>
+    /// <param name="value">A floating point number in the range of 
+    /// [0.0, 1.0]</param>
+    /// <exception cref="ArgumentOutOfRangeException">Thrown when value 
+    /// is outside of valid range. </exception>
     public Quarter(float value)
     {
         if (value < 0.0f || value >= 1.0f)
