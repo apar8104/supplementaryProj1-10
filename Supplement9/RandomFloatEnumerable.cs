@@ -20,7 +20,26 @@ public class RandomFloatEnumerable : IEnumerable<float>
 
     public IEnumerator<float> GetEnumerator()
     {
-        throw new NotImplementedException();
+        int lowCount = 0;
+
+        while (true)
+        {
+            float value = _generator();
+
+            if (value <= 0.5f)
+            {
+                lowCount++;
+                if (lowCount == 3)
+                {
+                   throw new InvalidSequenceException("Three consecutive values were ≤ 0.5."); 
+                }
+            }
+            else
+            {
+                lowCount = 0;
+            }
+            yield return value;
+        }
     }
 
     IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
