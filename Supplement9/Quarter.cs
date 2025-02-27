@@ -5,13 +5,14 @@ public class Quarter
 
     public Quarter(float value)
     {
-        throw new NotImplementedException();
+        if (value < 0.0f || value >= 1.0f)
+        {
+             throw new ArgumentOutOfRangeException(nameof(value), "Value must be in the range [0.0, 1.0).");
+        }
+        _value = value;
     }
 
-    private int GetQuarter()
-    {
-        throw new NotImplementedException();
-    }
+    private int GetQuarter() => (int)(_value * 4);
 
     public static bool operator ==(Quarter q1, Quarter q2)
     {
