@@ -33,13 +33,11 @@ public class Quarter
 
      public static bool operator >(Quarter q1, Quarter q2)
     {
-        throw new NotImplementedException();
+        if (q1 is null || q2 is null) throw new ArgumentNullException();
+        return q1._value > q2._value;
     }
 
-     public static bool operator >=(Quarter q1, Quarter q2)
-    {
-        throw new NotImplementedException();
-    }
+     public static bool operator >=(Quarter q1, Quarter q2) => q1 > q2 || q1 == q2;
 
     public override bool Equals(object obj)
     {
