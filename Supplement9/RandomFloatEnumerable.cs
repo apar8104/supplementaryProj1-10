@@ -29,6 +29,14 @@ public class RandomFloatEnumerable : IEnumerable<float>
         _generator = generator ?? throw new ArgumentNullException(nameof(generator));
     }
 
+        /// <summary>
+    /// Returns an enumerator that iterates through an infinite sequence of 
+    /// random numbers. 
+    /// </summary>
+    /// <returns>An enumerator that yields floating point numbers between 
+    /// 0.0 and 1.0. </returns>
+    /// <exception cref="InvalidSequenceException">Throws exception if three 
+    /// consecutive numbers are less than or equal to 0.5. </exception>
     public IEnumerator<float> GetEnumerator()
     {
         int lowCount = 0;
