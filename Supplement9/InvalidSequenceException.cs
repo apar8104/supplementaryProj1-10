@@ -3,11 +3,8 @@
 public class InvalidSequenceException : Exception
 {
     public InvalidSequenceException()
-    
         : base("An invalid sequence was generated.") {}
     
     public InvalidSequenceException(string message)
-    {
-        throw new NotImplementedException();
-    }
+        : base(message) {}
 }
