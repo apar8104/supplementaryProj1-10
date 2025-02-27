@@ -46,6 +46,13 @@ public class Quarter
     /// <returns>True if the instances belong to different quarters; otherwise, false.</returns>
      public static bool operator !=(Quarter q1, Quarter q2) => !(q1 == q2);
 
+     /// <summary>
+    /// Determines if one Quarter instance is less than another based on its numeric value.
+    /// </summary>
+    /// <param name="q1">The first quarter.</param>
+    /// <param name="q2">The second quarter.</param>
+    /// <returns>True if <paramref name="q1"/> is less than <paramref name="q2"/>; otherwise, false.</returns>
+    /// <exception cref="ArgumentException">Thrown if either parameter is null.</exception>
      public static bool operator <(Quarter q1, Quarter q2)
     {
         if (q1 is null || q2 is null) throw new ArgumentException();
