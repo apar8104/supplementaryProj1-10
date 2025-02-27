@@ -15,7 +15,7 @@ public class RandomFloatEnumerable : IEnumerable<float>
 
     public RandomFloatEnumerable(Func<float> generator)
     {
-        throw new NotImplementedException();
+        _generator = generator ?? throw new ArgumentNullException(nameof(generator));
     }
 
     public IEnumerator<float> GetEnumerator()
