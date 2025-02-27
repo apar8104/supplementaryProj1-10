@@ -41,7 +41,11 @@ public class Quarter
 
     public override bool Equals(object obj)
     {
-        throw new NotImplementedException();
+        if (obj is Quarter other)
+        {
+            return this == other;
+        }
+        return false;
     }
 
     public override int GetHashCode()
