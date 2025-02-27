@@ -88,6 +88,11 @@ public class Quarter
     /// <returns>True if <paramref name="q1"/> is greater than or equal to <paramref name="q2"/>; otherwise, false.</returns>
      public static bool operator >=(Quarter q1, Quarter q2) => q1 > q2 || q1 == q2;
 
+    /// <summary>
+    /// Determines whether this instance is equal to another object.
+    /// </summary>
+    /// <param name="obj">The object to compare.</param>
+    /// <returns>True if the object is a <see cref="Quarter"/> and belongs to the same quarter; otherwise, false.</returns>
     public override bool Equals(object obj)
     {
         if (obj is Quarter other)
