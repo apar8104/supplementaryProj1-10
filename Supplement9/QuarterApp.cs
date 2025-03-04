@@ -43,6 +43,11 @@ public class QuarterApp
     {
         quarters.Add(new Quarter(value));
     }
+
+    /// <summary>
+    /// Groups and displays all quarters in four categories: [0-0.25), [0.25-0.5), etc.
+    /// </summary>
+    /// <returns>A formatted string of grouped quarters. </returns>
     public string GetQuartersDisplay()
     {
         var groupedQuarters = quarters.GroupBy(q => q.GetQuarter())
