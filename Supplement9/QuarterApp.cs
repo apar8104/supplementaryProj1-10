@@ -36,7 +36,11 @@ public class QuarterApp
     }
     public string GetQuartersDisplay()
     {
-        throw new NotImplementedException();
+        var groupedQuarters = quarters.GroupBy(q => q.GetQuarter())
+        .OrderBy(g => g.Key)
+        .Select(g => $"{g.Key * 0.25} - {(g.Key + 1) * 0.25}: {g.Count()} quarters");
+
+        return string.Join("\n", groupedQuarters);
     }
 }
 

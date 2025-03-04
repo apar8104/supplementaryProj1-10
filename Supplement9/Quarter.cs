@@ -23,7 +23,7 @@ public class Quarter
     /// determines the quarter which the value belongs. 
     /// </summary>
     /// <returns>The quarter index (0, 3). </returns>
-    private int GetQuarter() => (int)(_value * 4);
+    public int GetQuarter() => (int)(_value * 4);
 
     /// <summary>
     /// Determines if two Quarter instances belong to the same quarter.
