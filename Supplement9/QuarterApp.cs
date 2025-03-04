@@ -34,6 +34,11 @@ public class QuarterApp
             }
         }
     }
+
+    /// <summary>
+    /// Adds a quarter to the list. Throws exception if out of range. 
+    /// </summary>
+    /// <param name="value">The float value representing the quarter. </param>
     public void AddQuarter(float value)
     {
         quarters.Add(new Quarter(value));
