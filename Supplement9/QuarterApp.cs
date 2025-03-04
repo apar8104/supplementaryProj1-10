@@ -32,7 +32,7 @@ public class QuarterApp
     }
     public void AddQuarter(float value)
     {
-        throw new NotImplementedException();
+        quarters.Add(new Quarter(value));
     }
     public string GetQuartersDisplay()
     {
