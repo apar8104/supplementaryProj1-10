@@ -2,6 +2,10 @@ namespace Supplement9;
 public class QuarterApp
 {
     private List<Quarter> quarters = new();
+
+    /// <summary>
+    /// Runs the console loop, allowing users to add quarters or quit. 
+    /// </summary>
     public void Run()
     {
         while (true)
