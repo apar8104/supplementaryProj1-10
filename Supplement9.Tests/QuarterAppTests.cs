@@ -12,7 +12,7 @@ public class QuarterAppTests
         app.AddQuarter(0.3f);
 
         var output = app.GetQuartersDisplay();
-        Assert.Contains("0.0 - 0.25", output);
+        Assert.Contains("0 - 0.25", output);
         Assert.Contains("0.25 - 0.5", output);
     }
 

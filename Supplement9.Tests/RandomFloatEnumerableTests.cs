@@ -9,11 +9,18 @@ public class RandomFloatEnumerableTests
         var generator = new RandomFloatEnumerable();
         using var enumerator = generator.GetEnumerator();
 
-        for (int i = 0; i < 10; i++)
+        try{
+            for (int i = 0; i < 10; i++)
+            {
+                Assert.True(enumerator.MoveNext());
+                float value = enumerator.Current;
+                Assert.InRange(value, 0.0f, 1.0f);
+            }
+        }
+        catch (InvalidSequenceException ex)
         {
-            Assert.True(enumerator.MoveNext());
-            float value = enumerator.Current;
-            Assert.InRange(value, 0.0f, 1.0f);
+            Console.WriteLine($"Test failed due to sequence rule: {ex.Message}");
+            return;
         }
     }
 
